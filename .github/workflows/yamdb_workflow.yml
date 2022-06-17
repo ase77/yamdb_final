@@ -27,8 +27,8 @@ jobs:
         # запуск проверки проекта по flake8
         python -m flake8
         # перейти в папку, содержащую manage.py —
-        #<корневая_папка_infra_actions>/<папка_проекта>/manage.py
-        cd infra_project/
+        #<корневая_папка_api_yamdb>/<папка_проекта>/manage.py
+        cd api_yamdb/
         # запустить написанные разработчиком тесты
         python manage.py test
 
@@ -54,7 +54,7 @@ jobs:
           uses: docker/build-push-action@v2
           with:
             push: true
-            tags: ase77/infra_actions:latest
+            tags: ase77/yamdb_final:latest
 
   deploy:
       runs-on: ubuntu-latest
@@ -69,10 +69,10 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             # Выполняет pull образа с DockerHub
-            sudo docker ase77/infra_actions
+            sudo docker ase77/yamdb_final
             #остановка всех контейнеров
             sudo docker stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 ase77/infra_actions
+            sudo docker run --rm -d -p 5000:5000 ase77/yamdb_final
 
   send_message:
     runs-on: ubuntu-latest
