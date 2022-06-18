@@ -22,10 +22,12 @@ jobs:
         # установка зависимостей
         pip install -r api_yamdb/requirements.txt
 
-    - name: Test with flake8 and django tests
+    - name: Test with flake8 and django tests and pytest
       run: |
         # запуск проверки проекта по flake8
         python -m flake8
+        # запуск проверки pytest
+        pytest
         # перейти в папку, содержащую manage.py —
         #<корневая_папка_api_yamdb>/<папка_проекта>/manage.py
         cd api_yamdb/
