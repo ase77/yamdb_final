@@ -2,11 +2,7 @@
 # CI и CD проекта api_yamdb
 ![example workflow](https://github.com/ase77/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 ## Описание:
-Настройка Continuous Integration и Continuous Deployment для приложения api_yamdb, реализовано:
-  * автоматический запуск тестов,
-  * обновление образов на Docker Hub,
-  * автоматический деплой на боевой сервер при пуше в главную ветку main,
-  * отправка уведомления в Telegram о том, что процесс деплоя успешно завершился.
+Настройка Continuous Integration и Continuous Deployment для приложения api_yamdb.
 
 Проект YaMDb собирает отзывы пользователей на произведения по категориям: «Книги», «Фильмы», «Музыка».
 Произведению может быть присвоен жанр из списка предустановленных.
