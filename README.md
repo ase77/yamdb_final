@@ -477,5 +477,8 @@ http://<host>/admin/
 
 `DELETE http://<host>/api/v1/users/{username}/`
 
+### Автор проекта:
+
+Моторин А.В.
 
 [__В начало__](#anchor) :point_up:
